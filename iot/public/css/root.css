@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import "tailwindcss/components";
+
+* {
+    scroll-behavior: smooth;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    background-color: #f7f7f7;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    height: 100vh;
+    min-height: 100vh;
+
+}
+
+
+.mobile-dashboard-nav {
+    transform: translateX(-500px);
+    transition: .8s;
+}
+.slide {
+    transform: translateX(0px);
+}
+
+
+:root {
+    --main-color: #ecf0f1;
+    --point-color: #3b82f6;
+    --size: 5px;
+  }
+
+  .loader {
+    background-color: var(--main-color);
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0; left: 0;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    z-index: 100000;
+  }
+
+  .loader__element {
+    border-radius: 100%;
+    border: var(--size) solid var(--point-color);
+    margin: calc(var(--size)*2);
+  }
+
+  .loader__element:nth-child(1) {
+    animation: preloader .6s ease-in-out alternate infinite;
+  }
+  .loader__element:nth-child(2) {
+    animation: preloader .6s ease-in-out alternate .2s infinite;
+  }
+
+  .loader__element:nth-child(3) {
+    animation: preloader .6s ease-in-out alternate .4s infinite;
+  }
+
+  @keyframes preloader {
+    100% { transform: scale(2); }
+  }
+
+
+  .post-list > ul > li {
+    margin-bottom: 10px;
+    cursor:pointer;
+
+  }
+
+
+  .article-category > p > img {
+    height: 20px;
+
+  }
+
+
+  #tech-stack > img {
+       height: 20px;
+  }
+
+
+  #categeryicons > img {
+    height: 20px;
+  }
+
+  .navbar {
+
+    backdrop-filter: blur(8px);
+
+
+  }
+
+  #catagory-wrapper {
+    display: flex;
+    align-items:center;
+  }
+
+  #category-wrapper > img {
+    height: 20px;
+  }
+
+
+  ion-icon {
+    font-size: 1.5rem;
+  }
+
+  #iconsearchcat > img {
+    height: 20px;
+  }
+
+  #iconsearchcats > img {
+    height: 35px;
+  }
+
+  #iconsearchcat , #iconsearchcats {
+    display: flex;
+    color:#202746;
+    gap:2;
+  }
+
+  @media (max-width: 800px) {
+    body ,html {
+    overflow-x: hidden;
+
+    }
+  }
+
+  #categoryimgs > img {
+    height: 40px;
+    }
